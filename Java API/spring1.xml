@@ -1,0 +1,29 @@
+<!-- //     7.5 Developing an application for email using Spring
+// We develop a basic e-mail application that creates simple e-mails containing text only.
+// Configuration file – Spring.xml
+// Let's create the configuration file, Spring.xml , and configure the mailSender bean of the
+// JavaMailSender class and define its properties:
+//  host
+//  port
+//  username
+//  password
+// Configuration of the bean for the MyEmailService class with the mailSender property will be like
+// this- -->
+<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSender">
+<property name="host" value="smtp.gmail.com" />
+<property name="port" value="25" />
+<property name="username" value="username" />
+<property name="password" value="password" />
+<property name="javaMailProperties">
+<properties>
+<prop key="mail.smtp.auth">true</prop>
+<prop key="mail.smtp.starttls.enable">true</prop>
+</properties>
+</property>
+</bean>
+<bean id="emailService" class="org.mitu.Spring.fourth.mail">
+<property name="mailSender" ref="mailSender" />
+</bean>
+<!-- // This configuration file sets the host as "smtp.gmail.com" and the port as "25." The username and the
+// password properties need to be set with reader's username and password of their own Gmail
+// account. The username is used as the sender of the e-mail. -->
