@@ -1,4 +1,4 @@
-public class sojao extends Thread {
+public class trying extends Thread {
     public void run(){
         String n = Thread.currentThread().getName();
         try{
