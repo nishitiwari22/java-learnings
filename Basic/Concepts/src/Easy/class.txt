@@ -1,0 +1,332 @@
+class Test {
+	public static void main(String[] args){
+		System.out.println("Jay Shree RadheKrishna")
+}
+}
+
+
+
+
+//Type cast
+int in = 10;
+byte bt = (byte) in;
+
+//Assignment operator += *=
+int x1 = 100;
+x1 = x1 * 5;
+x1 *= 5;
+
+//Ternary Operator A?B:C
+
+int age = 15;
+boolean can_vote = (age>=18)?true:false;
+System.out.println("You can vote? " + can_vote);
+
+
+ArrayDemo.java
+
+//Types
+//1D array
+int[] roll_numbers = {100, 101, 102, 103};
+System.out.println(roll_numbers[1]);
+
+String[] names = {"Radhe", "Krishna", "Balram"};
+System.out.println(names[0]);
+
+//Another way to create array
+int[] arr= new int[50];
+arr[0] = 1000;
+System.out.println(arr[0]);
+
+//2D array
+int[][] arr2D = {{1, 2, 3}, {4, 5}};
+System.out.println(arr2d[0][2]);
+
+//3d Array
+int[][][] arr3D = {{{1,2},{3,4,5}}};
+System.out.println(arr3D[0][1][0]);
+
+
+MethodDemo.java
+
+System.out.println(sum(20, 50));
+int result = sum(100, 500);
+System.out.println(result);
+
+//Method
+
+public static void print_name(String name){
+System.out.println("Hi");
+System.out.println("My name is");
+System.out.println("Nishi");
+
+}
+
+public static int sum(int x, int y)
+return x+y;
+
+
+UserInputDemo.java
+
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+System.out.println("Hey what is your age? ");
+int age = scanner.nextInt();
+
+
+System.out.println("What is your name?");
+String name = scanner.next();
+
+System.out.println("Name: " + name);
+System.out.println("Your age is " + age);
+
+}
+
+
+
+IfElseDemo.java
+
+int marks = 35;
+
+if(marks>=90){
+	System.out.println("Congrats you passed with A grade. ");
+
+}
+else if(marks>=70){
+	System.out.println("Congrats you passed with B grade.");
+}else{
+	System.out.println("Sorry you failed");
+}
+
+
+//Nested if-else
+
+int age = 18;
+boolean wear_shoes = false;
+
+if(age>=18) {
+	if(wear_shoes) {
+		System.out.println("You can enter in the club");
+}
+	else {
+		System.out.println("Please wear shoes and come back");
+
+}
+}
+	else {
+		System.out.println("You are not allowed");
+}
+
+
+
+//SwitchDemo.java
+
+String day = "Sun";
+
+switch(day) {
+	case "Mon";
+		System.out.println("Chest day");
+		break;
+	case "TUE";
+		System.out.println('Biceps Day");
+		break;
+	default:
+		System.out.println("Rest Day");
+
+
+}
+
+Loops in Java: for, while, do-while, (foreach: used for arrays) 
+
+
+int i = 1;
+for(System.out.println("initial");
+	i<=10;
+	System.out.println("increment")){
+	System.out.println(i);
+	i++;
+}
+
+
+int[] roll_numbers = {100, 101, 102, 103, 104};
+System.out.println(roll_numbers[0]);
+
+for(int i=0; i<5; i++)
+System.out.println(roll_numbers[i]);
+
+//for each loop
+for(int num: roll_numbers)
+System.out.println(num);
+
+
+// While loop
+
+int x = 11;
+
+while(x <= 10){
+	System.out.println(x);
+	x++;
+}
+
+// do while loop
+do {
+	System.out.println("I am inside do");
+}
+while(x <= 10);
+
+
+//ExceptionDemo
+
+try{
+	System.out.println(10/0); //Also have this understanding that it will give error
+	System.out.println("hello"); //This won't show up in output so always try to keep least code in try block 
+}
+
+catch (ArithmeticExcpetion AE) {
+	System.out.println(AE)
+}
+
+System.out.println(10/2); 
+//The above line is giving exception error and becasue of this rest of the lines are not working
+
+finally{
+	System.out.println("NISHI") //This will exeucte always so write imp code 
+
+}
+
+//100 lines of code
+System.out.println("line 1");
+System.out.println("line 1000"); 
+
+
+//BufferedReader (To read from the file)
+//PrintWriter (To write into a file)
+
+//FileIO.java
+
+//How to write into a text file 
+FileWriter fw = new FileWriter("Test.txt");
+PrintWriter pw = new PrintWriter(fw);
+
+pw.println("Hello My name is Nishi");
+
+pw.flush();
+pw.close();
+
+//How to read from a text file
+FileReader fr = new FileReader("Test.txt");
+BufferedReader br = new BufferedReader(fr);
+
+String s = br.readLine();
+System.out.print(s);
+br.close();
+
+
+https://www.bing.com/images/search?view=detailV2&ccid=g0MwNWX8&id=9D3B06A511BA2F3A4A34675C3EA6640372A47E3A&thid=OIP.g0MwNWX8vy06OJ4YgNov8AHaEK&mediaurl=https%3a%2f%2fi.ytimg.com%2fvi%2fuuGVSKybHO4%2fmaxresdefault.jpg&exph=720&expw=1280&q=differnece+in+throw+and+throws&simid=608053411329703674&FORM=IRPRST&ck=BBD54F389FE2ECF5DF658CCF6913524E&selectedIndex=8&ajaxhist=0&ajaxserp=0
+
+
+
+In Java, the Collection API refers to the Java Collections Framework, which is a set of classes and interfaces provided by the Java standard library to work with collections of objects. The Java Collections Framework offers a unified and standardized way to manage and manipulate groups of objects, such as lists, sets, and maps. It is part of the java.util package and is fundamental for many Java applications.
+
+The key interfaces and classes in the Java Collections Framework include:
+
+Collection: This is the root interface of the framework, which defines the basic operations common to all collection types, such as adding, removing, and iterating over elements. Subinterfaces of Collection include List, Set, and Queue.
+
+List: A collection that allows duplicate elements and maintains the order of insertion. Common implementations are ArrayList and LinkedList.
+
+Set: A collection that does not allow duplicate elements. Common implementations include HashSet, LinkedHashSet, and TreeSet.
+
+Map: A collection that represents key-value pairs. Common implementations are HashMap, LinkedHashMap, and TreeMap.
+
+Queue: A collection designed for specific ordering, typically used for tasks like managing elements in a FIFO (First-In-First-Out) or priority-based manner. The primary implementation is LinkedList, and there is also PriorityQueue.
+
+The Java Collections Framework also includes utility classes and methods for sorting, searching, and working with collections efficiently. Some of these classes include Collections (for various utility methods) and Arrays (for operations on arrays).
+
+Using the Java Collections Framework simplifies the process of managing and manipulating collections of objects in a consistent and efficient manner, and it is an essential part of Java programming when dealing with data structures. It provides a wide range of options for developers to choose from, depending on their specific requirements, and it encourages good programming practices, such as code reusability and type safety.
+
+
+
+
+Generics in Java is a feature that allows you to write classes, interfaces, and methods that operate on types without specifying the actual data type until the code is used. This provides type safety and code reusability. Generics were introduced in Java 5 to help developers create more flexible and reusable code.
+
+The primary benefits of using generics in Java are:
+
+Type Safety: Generics enable the compiler to catch type mismatches at compile time, rather than at runtime. This helps prevent class cast exceptions and other type-related errors.
+
+Code Reusability: You can write generic classes, interfaces, and methods that work with different data types, reducing the need to duplicate code for each type. This promotes code reusability and maintainability.
+
+Improved Readability: Generics make code more self-explanatory and readable by specifying the types used in the code.
+
+In Java, you can use generics with classes, interfaces, and methods. Here's an overview of how generics work in these contexts:
+
+Generic Classes and Interfaces:
+
+java
+Copy code
+public class Box<T> {
+    private T value;
+
+    public Box(T value) {
+        this.value = value;
+    }
+
+    public T getValue() {
+        return value;
+    }
+}
+In the example above, Box is a generic class that can store values of any data type. You can create instances of Box with different types, like Box<Integer>, Box<String>, and so on.
+
+Generic Methods:
+
+java
+Copy code
+public <T> T findMax(T[] arr) {
+    T max = arr[0];
+    for (T item : arr) {
+        if (item.compareTo(max) > 0) {
+            max = item;
+        }
+    }
+    return max;
+}
+In the example above, findMax is a generic method that works with any data type that supports comparison. The type parameter T is defined at the method level.
+
+Wildcards:
+
+Java also supports wildcards (?) for working with unknown types. Wildcards are often used in situations where you don't need to know the exact type but want to ensure compatibility. For example, List<?> represents a list of unknown type.
+
+Generics are widely used in Java libraries and frameworks, making it easier to create flexible and type-safe code. They are particularly valuable when working with collections (e.g., List<T>, Set<T>, Map<K, V>) and various data structures.
+
+
+In Java, arrays and collections are both used to store and manipulate groups of objects, but they have several key differences:
+
+Type Flexibility:
+
+Arrays: Arrays are homogeneous, meaning they can only store elements of the same data type. Once you define the data type of an array, you cannot store elements of a different type in it.
+Collections: Collections are more flexible and can store elements of different data types. You can have collections of objects of any class, interface, or data type.
+Dynamic Sizing:
+
+Arrays: Arrays have a fixed size, which is determined when the array is created. You cannot change the size of an array once it's allocated.
+Collections: Most collection classes in Java (e.g., ArrayList, LinkedList, HashSet) can dynamically resize themselves to accommodate additional elements as needed. This allows collections to grow or shrink as elements are added or removed.
+Generics Support:
+
+Arrays: While arrays can be parameterized with a specific data type (e.g., String[]), they are not as type-safe as collections with generics because they lack compile-time type checking.
+Collections: Collections, when used with generics, provide strong compile-time type checking. This means that you can ensure type safety when working with elements in a collection.
+Methods and Utility Functions:
+
+Arrays: Arrays provide limited built-in methods and utility functions for common operations like sorting, searching, or transforming elements. You often need to write custom code for such operations.
+Collections: Collections come with a wide range of built-in methods and utility functions (provided by the Java Collections Framework) that make it easier to perform common operations on data stored in collections. For example, you can use methods like add, remove, contains, sort, filter, and more.
+Interoperability:
+
+Arrays: Arrays are often used for low-level data storage and interoperation with native code, as well as for historical reasons.
+Collections: Collections are the preferred choice for most high-level programming tasks, especially when you need dynamic sizing and more advanced data manipulation features.
+Null Values:
+
+Arrays: Arrays can store null values for reference types (objects).
+Collections: Collections can also store null values for reference types.
+In summary, while both arrays and collections can store groups of elements, collections offer greater flexibility, dynamic sizing, and a wide range of built-in functions. They are often preferred for high-level Java programming tasks. However, arrays still have their place in specific use cases, such as low-level memory manipulation or when you need to interface with legacy code that relies on arrays.
+
+
+
+
