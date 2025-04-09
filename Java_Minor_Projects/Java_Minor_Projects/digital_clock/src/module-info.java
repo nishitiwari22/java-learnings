@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module digital_clock {
-}
